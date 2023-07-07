@@ -13,6 +13,8 @@ import {
   ExpandMore as Expand,
 } from "@mui/icons-material";
 
+import { IconButton } from "@mui/material";
+
 const Header = () => {
   return (
     <div className="header">
@@ -48,10 +50,18 @@ const Header = () => {
         <div className="header__info">
           <Avatar fontSize="large" />
           <h4>Name</h4>
-          <Add />
-          <Forum />
-          <NotificationsActive />
-          <Expand />
+          <IconButton>
+            <Add />
+          </IconButton>
+          <IconButton>
+            <Forum />
+          </IconButton>
+          <IconButton>
+            <NotificationsActive />
+          </IconButton>
+          <IconButton>
+            <Expand />
+          </IconButton>
         </div>
       </div>
     </div>
