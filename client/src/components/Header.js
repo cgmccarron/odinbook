@@ -15,12 +15,14 @@ import {
 
 import { IconButton } from "@mui/material";
 
+import "./Header.css";
+
 const Header = () => {
   return (
     <div className="header">
       {/* Left side of header to display logo */}
       <div className="header__left">
-        <img src="" alt="Odinbook logo" />
+        <img src="./Facebook-logo.png" alt="Odinbook logo" />
       </div>
       {/* searchbar for app*/}
       <div className="header__input">
@@ -29,19 +31,19 @@ const Header = () => {
       </div>
       {/* collapseable buttons for navigating the app */}
       <div className="header__center">
-        <div className="header__option header__option__active">
+        <div className="header__options header__options__active">
           <Home fontSize="large" />
         </div>
-        <div className="header__option">
+        <div className="header__options">
           <Flag fontSize="large" />
         </div>
-        <div className="header__option">
+        <div className="header__options">
           <Storefront fontSize="large" />
         </div>
-        <div className="header__option">
+        <div className="header__options">
           <Subscriptions fontSize="large" />
         </div>
-        <div className="header__option">
+        <div className="header__options">
           <Users fontSize="large" />
         </div>
       </div>
