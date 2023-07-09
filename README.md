@@ -18,7 +18,7 @@ To start the client:
 
 ---
 
-### Author: Christian McCarron
+### Author: <span style="color: purple;">Christian McCarron <span>
 
 [GitHub](https://github.com/cgmccarron)<br>
 [Portfolio](https://christianmccarron.com)<br>
