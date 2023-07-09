@@ -32,37 +32,37 @@ const Header = () => {
       {/* collapseable buttons for navigating the app */}
       <div className="header__center">
         <div className="header__options header__options__active">
-          <Home fontSize="large" />
+          <Home className="center__icon mui_icon" />
         </div>
         <div className="header__options">
-          <Flag fontSize="large" />
+          <Flag className="center__icon mui_icon" />
         </div>
         <div className="header__options">
-          <Storefront fontSize="large" />
+          <Storefront className="center__icon mui_icon" />
         </div>
         <div className="header__options">
-          <Subscriptions fontSize="large" />
+          <Subscriptions className="center__icon mui_icon" />
         </div>
         <div className="header__options">
-          <Users fontSize="large" />
+          <Users className="center__icon mui_icon" />
         </div>
       </div>
       {/* right side of header to display avatar, user, and functions relating to the user */}
       <div className="header__right">
         <div className="header__info">
-          <Avatar fontSize="large" />
+          <Avatar />
           <h4>Name</h4>
           <IconButton>
-            <Add />
+            <Add className="right__icon mui_icon" />
           </IconButton>
           <IconButton>
-            <Forum />
+            <Forum className="right__icon mui_icon" />
           </IconButton>
           <IconButton>
-            <NotificationsActive />
+            <NotificationsActive className="right__icon mui_icon" />
           </IconButton>
           <IconButton>
-            <Expand />
+            <Expand className="right__icon mui_icon" />
           </IconButton>
         </div>
       </div>

@@ -21,10 +21,12 @@
 .header__input {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: #eff3f5;
   padding: 10px;
   margin-left: 10px;
   border-radius: 33px;
+  height: 100%;
 }
 
 .header__input > input {
@@ -59,6 +61,10 @@
   border-bottom: 4px solid #2e81f4;
 }
 
+.center__icon {
+  transform: scale(1.4);
+}
+
 .header__right {
   display: flex;
 }
@@ -71,4 +77,36 @@
 
 .header__info > h4 {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 1012px) {
+  .header {
+    padding: 12px 16px 10px;
+  }
+
+  .header__left > img {
+    height: 30px;
+  }
+
+  .header__input {
+    padding: 5px;
+    margin-left: 5px;
+    height: 80%;
+  }
+
+  .header__input > input {
+    width: 80px;
+  }
+
+  .header__options {
+    padding: 0 15px;
+  }
+
+  .center__icon {
+    transform: scale(1);
+  }
+
+  .right__icon {
+    transform: scale(0.8);
+  }
 }

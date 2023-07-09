@@ -1,0 +1,19 @@
+.sidebar__row {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.sidebar__row:hover {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+.sidebar_row > p {
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.sidebar__row > .mui__icon {
+  font-size: xx-large;
+  color: #2e81f4;
+}
