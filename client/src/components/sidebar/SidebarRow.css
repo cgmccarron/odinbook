@@ -8,7 +8,7 @@
   background-color: lightgray;
   border-radius: 10px;
 }
-.sidebar_row > p {
+.sidebar__row > p {
   margin-left: 20px;
   font-weight: 600;
 }
