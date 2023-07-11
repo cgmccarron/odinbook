@@ -5,7 +5,7 @@ import "./Story.css";
 
 const Story = ({ image, profilePic, title }) => {
   return (
-    <div style={{ backgroundImage: `url(${image})` }}>
+    <div className="story" style={{ backgroundImage: `url(${image})` }}>
       <Avatar src={profilePic} className="story__avatar" />
       <h4>{title}</h4>
     </div>
