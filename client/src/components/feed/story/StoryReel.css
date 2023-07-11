@@ -1,3 +1,4 @@
 .story__reel {
   display: flex;
+  justify-content: center;
 }

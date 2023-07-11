@@ -5,10 +5,12 @@ import Feed from "./components/feed/Feed";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
-      <Sidebar />
-      <Feed />
+      <div className="app__body">
+        <Sidebar />
+        <Feed />
+      </div>
       {/* widgets */}
     </div>
   );

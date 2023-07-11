@@ -17,3 +17,13 @@
   font-size: xx-large;
   color: #2e81f4;
 }
+
+@media screen and (max-width: 1012px) {
+  .sidebar__row {
+    padding: 8px 6px;
+  }
+
+  .sidebar__row > p {
+    margin-left: 16px;
+  }
+}

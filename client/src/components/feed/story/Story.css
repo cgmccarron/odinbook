@@ -13,7 +13,7 @@
 }
 
 .story:hover {
-  transform: scale(1.07);
+  transform: scale(1.1);
 }
 
 .story__avatar {
@@ -26,4 +26,20 @@
   bottom: 20px;
   left: 20px;
   color: white;
+}
+
+@media screen and (max-width: 1012px) {
+  .story {
+    width: 102px;
+    height: 170px;
+  }
+
+  .story__avatar {
+    border: 3px solid #2e81f4;
+  }
+
+  .story > h4 {
+    bottom: 16px;
+    left: 16px;
+  }
 }
