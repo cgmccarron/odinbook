@@ -1,11 +1,12 @@
 import React from "react";
 import StoryReel from "./story/StoryReel";
+import PostMaker from "./postMaker/PostMaker";
 
 const Feed = () => {
   return (
     <div className="feed">
       <StoryReel />
-      {/* <PostMaker /> */}
+      <PostMaker />
 
       {/*{postData.map((entry) => (
         <Post
