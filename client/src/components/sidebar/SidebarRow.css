@@ -8,6 +8,15 @@
   background-color: lightgray;
   border-radius: 10px;
 }
+
+.avatar {
+  transform: scale(1.1);
+}
+
+.sidebar__row:first-of-type > p {
+  margin-left: 13px;
+}
+
 .sidebar__row > p {
   margin-left: 20px;
   font-weight: 600;
@@ -25,5 +34,17 @@
 
   .sidebar__row > p {
     margin-left: 16px;
+  }
+
+  .sidebar__row:first-of-type > p {
+    margin-left: 4px;
+  }
+
+  .sidebar__row > .mui__icon {
+    font-size: x-large;
+  }
+
+  .avatar {
+    transform: scale(0.85);
   }
 }

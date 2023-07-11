@@ -43,6 +43,8 @@ const PostMaker = () => {
           <Input
             type="file"
             className="pm__fileSelector"
+            disableUnderline="true"
+            cursor="pointer"
             onChange={handleChange}
           />
           <button onClick={handleSubmit} type="submit">

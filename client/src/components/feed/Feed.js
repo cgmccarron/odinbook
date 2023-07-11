@@ -3,6 +3,7 @@ import StoryReel from "./story/StoryReel";
 import PostMaker from "./postMaker/PostMaker";
 import Post from "./post/Post";
 
+import "./Feed.css";
 const Feed = () => {
   return (
     <div className="feed">
