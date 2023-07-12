@@ -2,6 +2,15 @@
 
 Odin Project's final project. The goal is to create facebook clone using javascript and the MERN stack. The MERN stack consists of MongoDB, Express, React, and Node.JS. The assignment is listed on the [Odin Project's](https://www.theodinproject.com/lessons/nodejs-odin-book) website.
 
+A list of requirements I made for this application is available in odinbook/REQUIRMENTS.md  
+I hope to create this project to demonstrate my abilities as a web developer.
+
+### Author: Christian McCarron
+
+[GitHub](https://github.com/cgmccarron)<br>
+[Portfolio](https://christianmccarron.com)<br>
+[Resume](###)<br>
+
 ---
 
 [<span style="color: green">M</span>ongoDB](https://www.mongodb.com/) as the database.<br>
@@ -25,9 +34,3 @@ cd client; npm start
 ```
 
 ---
-
-### Author: Christian McCarron
-
-[GitHub](https://github.com/cgmccarron)<br>
-[Portfolio](https://christianmccarron.com)<br>
-[Resume](###)<br>
