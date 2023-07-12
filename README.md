@@ -21,6 +21,10 @@ To start the client:
 
 ### Author: Christian McCarron
 
+<span style="color:red">
+BOOMER SOONER
+</span>
+
 [GitHub](https://github.com/cgmccarron)<br>
 [Portfolio](https://christianmccarron.com)<br>
 [Resume](###)<br>
