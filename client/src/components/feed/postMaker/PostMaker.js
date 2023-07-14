@@ -6,6 +6,7 @@ import {
   PhotoLibrary,
   InsertEmoticon,
 } from "@mui/icons-material";
+import instance from "../../../axios";
 
 const PostMaker = () => {
   /* input is the what the user writes in the text input for the post
@@ -27,6 +28,16 @@ const PostMaker = () => {
     console.log("Submit", input, image);
   };
 
+  const makePost = () => {
+    instance.post("/upload/posts", {
+      user: "me",
+      imgName: "null",
+      text: input,
+      avatar: "me",
+      timestamp: new Date(),
+    });
+  };
+
   return (
     <div className="post__maker">
       {/* pm = post__maker for shorter syntax */}
@@ -44,10 +55,10 @@ const PostMaker = () => {
             type="file"
             className="pm__fileSelector"
             disableUnderline="true"
-            cursor="pointer"
             onChange={handleChange}
+            style={{ cursor: "pointer" }}
           />
-          <button onClick={handleSubmit} type="submit">
+          <button onClick={makePost} type="submit">
             Hidden Submit
           </button>
         </form>

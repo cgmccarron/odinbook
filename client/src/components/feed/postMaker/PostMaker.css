@@ -27,9 +27,12 @@
   background-color: #eff2f5;
   flex: 1;
 }
-
 .pm__fileSelector {
   width: 105px;
+}
+
+.MuiInput-input > * {
+  cursor: pointer;
 }
 
 .pm__top > form > button {

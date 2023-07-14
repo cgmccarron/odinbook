@@ -24,7 +24,6 @@ app.use(cors());
 const mongoURI =
   "mongodb+srv://cgmccarr:nwivkotrvMGYYfvf@cluster0.asa3mdm.mongodb.net/?retryWrites=true&w=majority";
 const conn = mongoose.createConnection(mongoURI);
-
 let gfs;
 
 conn.once("open", () => {
@@ -63,30 +62,35 @@ app.post("./upload/images", upload.single("file"), (req, res) => {
   res.status(201).send(req.file);
 });
 
-app.post("/upload/posts", (req, res) => {
+app.post("/upload/posts", async (req, res) => {
   const dbPost = req.body;
-
-  mongoPosts.create(dbPost, (err, posts) => {
-    if (err) {
-      return res.status(500).send(err);
-    } else {
-      res.status(201).send(posts);
-    }
-  });
+  try {
+    await mongoPosts.create({ dbPost });
+  } catch (err) {
+    res.status(500).send(err);
+  }
 });
 
-app.get("/retrieve/posts", (req, res) => {
-  mongoPosts.find((err, posts) => {
+app.get("/retrieve/posts", async (req, res) => {
+  try {
+    const posts = await mongoPosts.find({});
+    if (!posts) {
+      return res.status(404).send("No Posts found");
+    }
+    if (posts) {
+      res.status(200).send(posts);
+    }
+  } catch (err) {
+    res.status(500).send(err, " there is an error");
+  }
+
+  /*mongoPosts.find((err, posts) => {
     if (err) {
       return res.status(500).send(err);
     } else {
       posts.sort((a, b) => {
         return b.timestamp - a.timestamp;
-      });
-
-      res.status(200).send(posts);
-    }
-  });
+      }); */
 });
 
 app.get("/retrieve/images/single", (req, res) => {
