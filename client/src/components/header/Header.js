@@ -32,31 +32,31 @@ const Header = () => {
       </div>
       {/* collapseable buttons for navigating the app */}
       <div className="header__center">
-        <div className="header__options header__options__active">
-          <Link href="/">
+        <Link href="/">
+          <div className="header__options header__options__active">
             <Home className="center__icon mui_icon" />
-          </Link>
-        </div>
-        <div className="header__options">
-          <Link href="/pages">
+          </div>
+        </Link>
+        <Link href="/pages">
+          <div className="header__options">
             <Flag className="center__icon mui_icon" />
-          </Link>
-        </div>
-        <div className="header__options">
-          <Link href="/market">
+          </div>
+        </Link>
+        <Link href="/market">
+          <div className="header__options">
             <Storefront className="center__icon mui_icon" />
-          </Link>
-        </div>
-        <div className="header__options">
-          <Link href="videosPage">
+          </div>
+        </Link>
+        <Link href="videoFeed">
+          <div className="header__options">
             <Subscriptions className="center__icon mui_icon" />
-          </Link>
-        </div>
-        <div className="header__options">
-          <Link href="friends">
+          </div>
+        </Link>
+        <Link href="friends">
+          <div className="header__options">
             <Users className="center__icon mui_icon" />
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
       {/* right side of header to display avatar, user, and functions relating to the user */}
       <div className="header__right">

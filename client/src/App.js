@@ -4,7 +4,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Feed from "./components/feed/Feed";
 import Widget from "./components/widget/Widget";
 import Login from "./pages/Login";
-import VideoPage from "./pages/VideoPage";
+import VideoFeed from "./pages/videos/VideoFeed";
 import Pages from "./pages/Pages";
 import Market from "./pages/Market";
 import Friends from "./pages/Friends";
@@ -25,8 +25,8 @@ function App() {
               <Feed />
               <Widget />
             </Route>
-            <Route path="/videosPage">
-              <VideoPage />
+            <Route path="/videoFeed">
+              <VideoFeed />
             </Route>
             <Route path="/pages">
               <Pages />

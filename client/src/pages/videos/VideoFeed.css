@@ -1,0 +1,11 @@
+.video__page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.video__feed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
