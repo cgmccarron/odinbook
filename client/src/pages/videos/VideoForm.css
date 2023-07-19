@@ -1,0 +1,37 @@
+.video__form {
+  margin-top: 30px;
+  background-color: white;
+  width: 80%;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+}
+
+.video__form > form {
+  display: flex;
+  flex: 1;
+}
+
+.vf__input {
+  outline-width: 0;
+  border: none;
+  padding: 5px 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  background-color: #eff2f5;
+  flex: 1;
+}
+
+.video__form > form > button {
+  background-color: #2e81f4;
+  outline-width: 0;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.video__form > form > button:hover {
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   HomeOutlined as Home,
   Search,
@@ -19,6 +19,8 @@ import { Link } from "wouter";
 import "./Header.css";
 
 const Header = () => {
+  const [isActive, setActive] = useState(0);
+
   return (
     <div className="header">
       {/* Left side of header to display logo */}
@@ -30,30 +32,60 @@ const Header = () => {
         <Search />
         <input type="text" placeholder="Search" />
       </div>
-      {/* collapseable buttons for navigating the app */}
+      {/* buttons for navigating the app */}
       <div className="header__center">
-        <Link href="/">
-          <div className="header__options header__options__active">
+        <Link href="/" onClick={() => setActive(0)}>
+          <div
+            className={
+              0 === isActive
+                ? "header__options__active  header__options"
+                : "header__options"
+            }
+          >
             <Home className="center__icon mui_icon" />
           </div>
         </Link>
-        <Link href="/pages">
-          <div className="header__options">
+        <Link href="/pages" onClick={() => setActive(1)}>
+          <div
+            className={
+              1 === isActive
+                ? "header__options__active  header__options"
+                : "header__options"
+            }
+          >
             <Flag className="center__icon mui_icon" />
           </div>
         </Link>
-        <Link href="/market">
-          <div className="header__options">
+        <Link href="/market" onClick={() => setActive(2)}>
+          <div
+            className={
+              2 === isActive
+                ? "header__options__active  header__options"
+                : "header__options"
+            }
+          >
             <Storefront className="center__icon mui_icon" />
           </div>
         </Link>
-        <Link href="videoFeed">
-          <div className="header__options">
+        <Link href="videoFeed" onClick={() => setActive(3)}>
+          <div
+            className={
+              3 === isActive
+                ? "header__options__active  header__options"
+                : "header__options"
+            }
+          >
             <Subscriptions className="center__icon mui_icon" />
           </div>
         </Link>
-        <Link href="friends">
-          <div className="header__options">
+        <Link href="friends" onClick={() => setActive(4)}>
+          <div
+            className={
+              4 === isActive
+                ? "header__options__active  header__options"
+                : "header__options"
+            }
+          >
             <Users className="center__icon mui_icon" />
           </div>
         </Link>

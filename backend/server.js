@@ -4,11 +4,10 @@ import cors from "cors";
 import multer from "multer";
 import MulterGridfsStorage, { GridFsStorage } from "multer-gridfs-storage";
 import Grid from "gridfs-stream";
-import bodyParser from "body-parser";
 import path from "path";
 import Pusher from "pusher";
 
-import mongoPosts from "./postModel.js";
+import mongoPosts from "./models/postModel.js";
 
 Grid.mongo = mongoose.mongo;
 
@@ -17,7 +16,9 @@ const app = express();
 const port = process.env.PORT || 9000;
 
 //middleware
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded());
+
 app.use(cors());
 
 //db config
@@ -63,9 +64,11 @@ app.post("./upload/images", upload.single("file"), (req, res) => {
 });
 
 app.post("/upload/posts", async (req, res) => {
+  console.log(req.body);
   const dbPost = req.body;
   try {
-    await mongoPosts.create({ dbPost });
+    await mongoPosts.create(dbPost);
+    res.status(201).send(req.body);
   } catch (err) {
     res.status(500).send(err);
   }

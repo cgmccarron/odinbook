@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const postModel = mongoose.Schema({
-  user: String,
+  user_id: String,
   imgName: String,
   text: String,
   avatar: String,

@@ -8,8 +8,9 @@ import VideoFeed from "./pages/videos/VideoFeed";
 import Pages from "./pages/Pages";
 import Market from "./pages/Market";
 import Friends from "./pages/Friends";
+import { useStateValue } from "./StateProvider";
 
-import { Link, Route } from "wouter";
+import { Route } from "wouter";
 
 function App() {
   //const [{ user }, dispatch] = useStateValue();
