@@ -5,3 +5,8 @@
   padding-top: 25px;
   flex: 1;
 }
+
+.new__post {
+  width: 100%;
+  flex: 1;
+}

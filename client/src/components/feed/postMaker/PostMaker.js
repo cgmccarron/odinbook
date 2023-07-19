@@ -30,7 +30,7 @@ const PostMaker = () => {
 
   const makePost = () => {
     instance.post("/upload/posts", {
-      user: "me",
+      username: "Goose McCarron",
       imgName: "null",
       text: input,
       avatar: "me",

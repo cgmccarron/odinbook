@@ -86,14 +86,6 @@ app.get("/retrieve/posts", async (req, res) => {
   } catch (err) {
     res.status(500).send(err, " there is an error");
   }
-
-  /*mongoPosts.find((err, posts) => {
-    if (err) {
-      return res.status(500).send(err);
-    } else {
-      posts.sort((a, b) => {
-        return b.timestamp - a.timestamp;
-      }); */
 });
 
 app.get("/retrieve/images/single", (req, res) => {
