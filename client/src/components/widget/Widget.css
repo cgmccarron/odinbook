@@ -1,0 +1,14 @@
+.widget__container {
+  margin: 10px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1012px) {
+  .widget__container {
+    margin: 0 5px;
+  }
+
+  .widget__container > iframe {
+    display: none;
+  }
+}
