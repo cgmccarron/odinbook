@@ -35,3 +35,19 @@
 .video__form > form > button:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 1012px) {
+  .video__form {
+    margin-top: 20px;
+    padding: 6px;
+    width: 100%;
+  }
+
+  .vf__input {
+    padding: 5px 10px;
+  }
+
+  .video__form > form > button {
+    padding: 5px 5px;
+  }
+}

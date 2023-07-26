@@ -6,5 +6,15 @@
 }
 
 .video__player:hover {
-  transform: scale(1.01);
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 1012px) {
+  .video__player {
+    padding: 10px;
+  }
+
+  .video__player:hover {
+    transform: scale(1.02);
+  }
 }

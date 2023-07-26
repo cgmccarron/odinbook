@@ -14,3 +14,15 @@
   gap: 10px;
   padding-top: 15px;
 }
+
+@media screen and (max-width: 1012px) {
+  .video__page {
+    margin-right: 80px;
+    padding: 5px 12px;
+  }
+
+  .video__feed {
+    gap: 5px;
+    padding-top: 10px;
+  }
+}
