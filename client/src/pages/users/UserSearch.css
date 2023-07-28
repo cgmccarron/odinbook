@@ -1,18 +1,19 @@
-.video__form {
+.user__search {
   margin-top: 30px;
   background-color: white;
   width: 80%;
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+  grid-column: 1 / -1;
 }
 
-.video__form > form {
+.user__search > form {
   display: flex;
   flex: 1;
 }
 
-.vf__input {
+.us__input {
   outline-width: 0;
   border: none;
   padding: 5px 20px;
@@ -22,7 +23,7 @@
   flex: 1;
 }
 
-.video__form > form > button {
+.user__search > form > button {
   background-color: #2e81f4;
   outline-width: 0;
   border: none;
@@ -32,26 +33,22 @@
   font-weight: 600;
 }
 
-.video__form > form > button:hover {
+.user__search > form > button:hover {
   cursor: pointer;
 }
 
-.mui__icon {
-  color: #ff0000;
-}
-
 @media screen and (max-width: 1012px) {
-  .video__form {
+  .user__search {
     margin-top: 20px;
     padding: 6px;
     width: 100%;
   }
 
-  .vf__input {
+  .us__input {
     padding: 5px 10px;
   }
 
-  .video__form > form > button {
+  .user__search > form > button {
     padding: 5px 5px;
   }
 }

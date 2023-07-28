@@ -13,10 +13,9 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <SidebarRow src="./Facebook-logo.png" title="Name" />
-      <SidebarRow Icon={EmojiFlagsIcon} title="Pages" />
+      <SidebarRow Icon={EmojiFlagsIcon} title="Users" />
       <SidebarRow Icon={ChatIcon} title="Messenger" />
       <SidebarRow Icon={PeopleIcon} title="Friends" />
-      <SidebarRow Icon={ExpandMoreIcon} />
     </div>
   );
 };

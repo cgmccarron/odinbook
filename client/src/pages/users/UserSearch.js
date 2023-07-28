@@ -1,20 +1,21 @@
 import React, { useState } from "react";
-import { YouTube } from "@mui/icons-material";
-import "./VideoForm.css";
+import { Search } from "@mui/icons-material";
 
-const VideoForm = () => {
+import "./UserSearch.css";
+
+const UserSearch = () => {
   const [input, setInput] = useState("");
   const handleSubmit = (e) => {
     console.log(e.target.value);
   };
   return (
-    <div className="video__form">
+    <div className="user__search">
       <form>
-        <YouTube className="mui__icon" />
+        <Search />
         <input
           type="text"
-          className="vf__input"
-          placeholder="Paste a youtube video URL here"
+          className="us__input"
+          placeholder="Search for a user"
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
@@ -26,4 +27,4 @@ const VideoForm = () => {
   );
 };
 
-export default VideoForm;
+export default UserSearch;

@@ -7,10 +7,8 @@ import {
   SupervisedUserCircleOutlined as Users,
   StorefrontOutlined as Storefront,
   AccountBox as Avatar,
-  Add,
+  NotificationsActive as Notifs,
   Forum,
-  NotificationsActive,
-  ExpandMore as Expand,
 } from "@mui/icons-material";
 
 import { IconButton } from "@mui/material";
@@ -94,18 +92,12 @@ const Header = () => {
       <div className="header__right">
         <div className="header__info">
           <Avatar />
-          <h4>Name</h4>
+          <h4>Christian McCarron</h4>
           <IconButton>
-            <Add className="right__icon mui_icon" />
+            <Notifs className="right__icon mui_icon" />
           </IconButton>
           <IconButton>
             <Forum className="right__icon mui_icon" />
-          </IconButton>
-          <IconButton>
-            <NotificationsActive className="right__icon mui_icon" />
-          </IconButton>
-          <IconButton>
-            <Expand className="right__icon mui_icon" />
           </IconButton>
         </div>
       </div>

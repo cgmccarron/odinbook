@@ -1,0 +1,10 @@
+.page {
+  display: grid;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-right: 250px;
+  margin-top: 20px;
+  grid-template-columns: 1fr 1fr;
+}

@@ -3,11 +3,11 @@ import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
 import Feed from "./components/feed/Feed";
 import Widget from "./components/widget/Widget";
-import Login from "./pages/Login";
+import Login from "./pages/login/Login";
 import VideoFeed from "./pages/videos/VideoFeed";
-import Pages from "./pages/Pages";
-import Market from "./pages/Market";
-import Friends from "./pages/Friends";
+import Pages from "./pages/users/users-page/Pages";
+import Market from "./pages/market/Market";
+import Friends from "./pages/users/friends/Friends";
 import { useStateValue } from "./StateProvider";
 
 import { Route } from "wouter";

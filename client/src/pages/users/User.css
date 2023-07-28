@@ -1,0 +1,12 @@
+.user__component {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  margin: 5px 10px;
+  grid-column: span 1;
+}

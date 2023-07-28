@@ -1,0 +1,21 @@
+.product {
+  background-color: white;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 10%;
+  margin-top: 50px;
+  border-radius: 15px;
+}
+
+.product > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.product > a > img {
+  max-width: 100%;
+  height: auto;
+}
