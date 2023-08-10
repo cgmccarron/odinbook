@@ -25,3 +25,11 @@
   - Alternatively could hard code stories to be links to other projects. Might consider this for being a way to continue to share my projects with recuriters, hiring managers <br>
 - A chat system with friends only<br>
 - Some sort of logo, theme, and color pallette to use for styling purposes <br>
+
+colors:
+
+- edae49 Gold
+- d1495b Red
+- 00798c Teal
+- 30638e Blue
+- 003d5b Dark Blue

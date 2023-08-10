@@ -13,8 +13,8 @@ import { useStateValue } from "./StateProvider";
 import { Route } from "wouter";
 
 function App() {
-  //const [{ user }, dispatch] = useStateValue();
-  const user = true;
+  const [{ user }, dispatch] = useStateValue();
+
   return (
     <div className="app">
       {user ? (

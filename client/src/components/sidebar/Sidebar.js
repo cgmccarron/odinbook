@@ -12,9 +12,9 @@ import PeopleIcon from "@mui/icons-material/People";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <SidebarRow src="./Facebook-logo.png" title="Name" />
+      <SidebarRow src="/ob.png" title="Christian McCarron" />
       <SidebarRow Icon={EmojiFlagsIcon} title="Users" />
-      <SidebarRow Icon={ChatIcon} title="Messenger" />
+      <SidebarRow Icon={ChatIcon} title="Chat" />
       <SidebarRow Icon={PeopleIcon} title="Friends" />
     </div>
   );

@@ -65,15 +65,11 @@ const PostMaker = () => {
       </div>
       <div className="pm__bottom">
         <div className="pm__options">
-          <VideoCameraFront style={{ color: "red" }} />
-          <h3>Live Video</h3>
-        </div>
-        <div className="pm__options">
-          <PhotoLibrary style={{ color: "green" }} />
+          <PhotoLibrary style={{ color: "#003d5b" }} />
           <h3>Photo/Video</h3>
         </div>
         <div className="pm__options">
-          <InsertEmoticon style={{ color: "orange" }} />
+          <InsertEmoticon style={{ color: "#edae49" }} />
           <h3>Feeling/Activity</h3>
         </div>
       </div>

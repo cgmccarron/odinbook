@@ -23,7 +23,7 @@ const Header = () => {
     <div className="header">
       {/* Left side of header to display logo */}
       <div className="header__left">
-        <img src="./Facebook-logo.png" alt="Odinbook logo" />
+        <img src="./ob.svg" alt="Odinbook logo" />
       </div>
       {/* searchbar for app*/}
       <div className="header__input">

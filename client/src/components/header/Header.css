@@ -53,12 +53,12 @@
 .header__options:hover {
   background-color: #eff3f5;
   align-items: center;
-  color: #2e81f4;
+  color: #00798c;
 }
 
 .header__options__active {
-  color: #2e81f4;
-  border-bottom: 4px solid #2e81f4;
+  color: #30638e;
+  border-bottom: 4px solid #30638e;
 }
 
 .center__icon {
@@ -108,5 +108,9 @@
 
   .right__icon {
     transform: scale(0.8);
+  }
+
+  .header__info > h4 {
+    font-size: small;
   }
 }

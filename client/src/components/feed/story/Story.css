@@ -18,7 +18,7 @@
 
 .story__avatar {
   margin: 10px;
-  border: 5px solid #2e81f4;
+  border: 5px solid #00798c;
 }
 
 .story > h4 {
@@ -35,7 +35,7 @@
   }
 
   .story__avatar {
-    border: 3px solid #2e81f4;
+    border: 3px solid #00798c;
   }
 
   .story > h4 {

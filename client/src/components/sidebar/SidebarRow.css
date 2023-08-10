@@ -24,7 +24,10 @@
 
 .sidebar__row > .mui__icon {
   font-size: xx-large;
-  color: #2e81f4;
+  color: #30638e;
+}
+.sidebar__row:hover > .mui__icon {
+  color: #00798c;
 }
 
 @media screen and (max-width: 1012px) {
