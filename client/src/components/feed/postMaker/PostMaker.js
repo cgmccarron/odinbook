@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import "./PostMaker.css";
 import { Avatar, Input } from "@mui/material";
-import {
-  VideoCameraFront,
-  PhotoLibrary,
-  InsertEmoticon,
-} from "@mui/icons-material";
+import { WebStories, PhotoLibrary, InsertEmoticon } from "@mui/icons-material";
 import instance from "../../../axios";
 
 const PostMaker = () => {
@@ -71,6 +67,10 @@ const PostMaker = () => {
         <div className="pm__options">
           <InsertEmoticon style={{ color: "#edae49" }} />
           <h3>Feeling/Activity</h3>
+        </div>
+        <div className="pm__options">
+          <WebStories style={{ color: "#d1495b" }} />
+          <h3>Projects</h3>
         </div>
       </div>
     </div>

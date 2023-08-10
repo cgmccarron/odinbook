@@ -56,8 +56,13 @@
 .post__option:hover {
   background-color: #eff2f5;
   border-radius: 10px;
+  color: #00798c;
 }
 
 .post_option > p {
   margin-left: 10px;
+}
+
+.post__option:hover > .MUI__icon {
+  color: #00798c;
 }

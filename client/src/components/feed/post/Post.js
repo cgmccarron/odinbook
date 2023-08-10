@@ -19,15 +19,15 @@ const Post = ({ profilePic, username, imgName, message, timestamp }) => {
       </div>
       <div className="post__options">
         <div className="post__option">
-          <ThumbUp />
+          <ThumbUp className="MUI__icon" />
           <p>like</p>
         </div>
         <div className="post__option">
-          <ChatBubble />
+          <ChatBubble className="MUI__icon" />
           <p>comment</p>
         </div>
         <div className="post__option">
-          <NearMe />
+          <NearMe className="MUI__icon" />
           <p>share</p>
         </div>
       </div>
