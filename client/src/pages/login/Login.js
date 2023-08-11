@@ -6,6 +6,8 @@ import { useStateValue } from "../../StateProvider";
 import { actionTypes } from "../../Reducer";
 import { signInWithPopup } from "firebase/auth";
 
+import { GitHub } from "@mui/icons-material";
+
 const Login = () => {
   const [state, dispatch] = useStateValue();
 
@@ -29,6 +31,15 @@ const Login = () => {
       </div>
       <Button type="submit" onClick={signIn}>
         Sign In
+      </Button>
+      <Button
+        onClick={(e) => {
+          e.preventDefault();
+          e.target = "_blank";
+          window.open("https://github.com/cgmccarron/odinbook", "_blank");
+        }}
+      >
+        <GitHub />
       </Button>
     </div>
   );

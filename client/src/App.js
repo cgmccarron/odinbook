@@ -11,6 +11,7 @@ import Friends from "./pages/users/friends/Friends";
 import { useStateValue } from "./StateProvider";
 
 import { Route } from "wouter";
+import Chat from "./pages/chat/Chat";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route path="/friends">
               <Friends />
+            </Route>
+            <Route path="/chat">
+              <Chat />
             </Route>
           </div>
         </>
