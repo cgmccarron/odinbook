@@ -6,7 +6,12 @@
   border-radius: 15px;
   justify-content: space-between;
   align-items: center;
-  width: 400px;
-  margin: 5px 10px;
-  grid-column: span 1;
+  width: 90%;
+}
+
+.MUI__button:hover > .add__user {
+  color: #00798c;
+}
+.MUI__button:hover > .remove__user {
+  color: #d1495b;
 }

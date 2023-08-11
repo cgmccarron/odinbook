@@ -12,14 +12,14 @@ const Users = ({ name, profilePic, friend }) => {
       <h3 className="user__name">{name}</h3>
       {friend ? (
         <p>
-          <IconButton>
-            <PersonRemove />
+          <IconButton className="MUI__button">
+            <PersonRemove className="remove__user" />
           </IconButton>
         </p>
       ) : (
         <p>
-          <IconButton>
-            <PersonAdd />
+          <IconButton className="MUI__button">
+            <PersonAdd className="add__user" />
           </IconButton>
         </p>
       )}

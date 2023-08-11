@@ -20,6 +20,7 @@ I hope to create this project to demonstrate my abilities as a web developer.
 
 For the UI component and icon library I used [Material UI](https://mui.com/). <br>
 For the Facebook login authentication I used [Firebase Authentication](https://firebase.google.com/docs/auth).<br>
+For the Router Library I used a minimalist router [Wouter](https://github.com/molefrog/wouter). <br>
 
 ---
 
