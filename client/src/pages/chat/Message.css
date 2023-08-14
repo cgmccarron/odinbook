@@ -1,0 +1,27 @@
+.message {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+  min-height: 10vh;
+  max-width: 40vw;
+}
+
+.message__top {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background-color: rgba(48, 99, 142, 0.5);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.message__top > p {
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.message__bottom {
+  padding: 10px 5px;
+  padding-left: 10px;
+}
