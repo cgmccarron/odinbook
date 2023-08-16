@@ -1,6 +1,6 @@
 {
   "short_name": "OdinBook",
-  "name": "Create React App Sample",
+  "name": "OdinBook, a Facebook clone for the Odin Project",
   "icons": [
     {
       "src": "odin-book.512x345.png",
