@@ -50,7 +50,7 @@ const PostMaker = () => {
           <Input
             type="file"
             className="pm__fileSelector"
-            disableUnderline="true"
+            disableUnderline={true}
             onChange={handleChange}
             style={{ cursor: "pointer" }}
           />

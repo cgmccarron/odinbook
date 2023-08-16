@@ -18,7 +18,6 @@ const Feed = () => {
       .get("retrieve/posts")
       .then((res) => {
         setPostData(res.data);
-        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };
@@ -41,6 +40,7 @@ const Feed = () => {
           {postData.map((e) => {
             return (
               <Post
+                key={e._id}
                 username={e.username}
                 timestamp={e.timestamp}
                 imgName={e.imgName}

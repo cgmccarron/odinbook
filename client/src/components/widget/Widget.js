@@ -10,9 +10,8 @@ const Widget = () => {
         style={{ border: "none", overflow: "hidden" }}
         height="600"
         width="340"
-        frameborder="0"
-        allowfullscreen="true"
-        allowTransparency="true"
+        frameBorder="0"
+        allowFullScreen={true}
         allow="encrypted-media;"
         title="facebook-widget"
         className="widget"
