@@ -7,6 +7,9 @@ import Grid from "gridfs-stream";
 import path from "path";
 import Pusher from "pusher";
 
+import authRouter from "./routes/auth-routes.js";
+import postRouter from "./routes/feed-routes.js";
+
 import mongoPosts from "./models/postModel.js";
 
 Grid.mongo = mongoose.mongo;
@@ -54,10 +57,12 @@ const upload = multer({ storage });
 
 mongoose.connect(mongoURI);
 
-// api routes
+// apes
 app.get("/", (req, res) => {
   res.status(200).send("hello world");
 });
+
+app.use("/auth", authRouter);
 
 app.post("./upload/images", upload.single("file"), (req, res) => {
   res.status(201).send(req.file);
