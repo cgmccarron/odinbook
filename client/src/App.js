@@ -14,7 +14,8 @@ import { Route } from "wouter";
 import Chat from "./pages/chat/Chat";
 
 function App() {
-  const [{ user }, dispatch] = useStateValue();
+  // const [{ user }, dispatch] = useStateValue();
+  const user = true;
 
   return (
     <div className="app">
