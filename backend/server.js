@@ -9,6 +9,7 @@ import Pusher from "pusher";
 
 import authRouter from "./routes/auth-routes.js";
 import postRouter from "./routes/feed-routes.js";
+import chatRouter from "./routes/chat-routes.js";
 
 import mongoPosts from "./models/postModel.js";
 
@@ -63,6 +64,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/auth", authRouter);
+app.use("/chat", chatRouter);
 
 app.post("./upload/images", upload.single("file"), (req, res) => {
   res.status(201).send(req.file);
