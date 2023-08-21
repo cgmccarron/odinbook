@@ -6,7 +6,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 const ChatRoomObject = ({ user, notif }) => {
   return (
     <div>
-      <Avatar src={user.avitar} />
+      <Avatar src={user.avatar} />
       <h2>{user.name}</h2>
       {notif ? <NotificationsActiveIcon /> : <CheckCircleIcon />}
     </div>

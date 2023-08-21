@@ -1,11 +1,21 @@
 import passport from "passport";
-const GoogleStrategy = require("passport-google-oauth20").Strategy;
+import GoogleStrategy from "passport-google-oauth20";
+
+import "dotenv/config";
 
 passport.use(
-  new GoogleStrategy({
-    //options for stat
-  }),
-  () => {
-    //passport callback function
-  }
+  new GoogleStrategy(
+    {
+      callbackURL: "auth/google/redirect",
+      clientID: process.env.CLIENTID,
+      clientSecret: process.env.CLIENTSECRET,
+    },
+    () => {
+      //passport callback function
+    }
+  )
 );
+
+let foo = "f00";
+
+export default foo;

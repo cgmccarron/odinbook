@@ -12,6 +12,7 @@ import { useStateValue } from "./StateProvider";
 
 import { Route } from "wouter";
 import Chat from "./pages/chat/Chat";
+import ChatRoom from "./pages/chat/ChatRoom";
 
 function App() {
   // const [{ user }, dispatch] = useStateValue();
@@ -41,7 +42,7 @@ function App() {
               <Friends />
             </Route>
             <Route path="/chat">
-              <Chat />
+              <ChatRoom />
             </Route>
           </div>
         </>

@@ -13,6 +13,7 @@ import chatRouter from "./routes/chat-routes.js";
 
 import mongoPosts from "./models/postModel.js";
 
+import foo from "./services/passport-setup.js";
 Grid.mongo = mongoose.mongo;
 
 //app config

@@ -1,4 +1,5 @@
 import express from "express";
+import passport from "passport";
 
 const authRouter = express.Router();
 //auth login
@@ -13,9 +14,11 @@ authRouter.get("/logout", (req, res) => {
 });
 
 //auth with google
-authRouter.get("/google", (req, res) => {
-  //handle with passport
-  res.send("logging in with google");
-});
+authRouter.get(
+  "/google",
+  passport.authenticate("google", {
+    scope: ["profile"],
+  })
+);
 
 export default authRouter;
