@@ -14,7 +14,6 @@ const setupAuth = passport.use(
     (accessToken, refreshToken, profile, done) => {
       //passport callback function
       console.log("function fired");
-      console.log(profile);
     }
   )
 );

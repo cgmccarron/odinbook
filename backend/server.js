@@ -6,6 +6,7 @@ import MulterGridfsStorage, { GridFsStorage } from "multer-gridfs-storage";
 import Grid from "gridfs-stream";
 import path from "path";
 import Pusher from "pusher";
+import "dotenv/config";
 
 import authRouter from "./routes/auth-routes.js";
 import postRouter from "./routes/feed-routes.js";
@@ -29,8 +30,7 @@ app.use(express.urlencoded());
 app.use(cors());
 
 //db config
-const mongoURI =
-  "mongodb+srv://cgmccarr:nwivkotrvMGYYfvf@cluster0.asa3mdm.mongodb.net/?retryWrites=true&w=majority";
+const mongoURI = process.env.MONGO_DB_URI;
 const conn = mongoose.createConnection(mongoURI);
 let gfs;
 
