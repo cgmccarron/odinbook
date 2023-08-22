@@ -10,10 +10,12 @@ import Pusher from "pusher";
 import authRouter from "./routes/auth-routes.js";
 import postRouter from "./routes/feed-routes.js";
 import chatRouter from "./routes/chat-routes.js";
+import userRouter from "./routes/user-routes.js";
 
 import mongoPosts from "./models/postModel.js";
 
-import foo from "./services/passport-setup.js";
+import setupAuth from "./services/passport-setup.js";
+
 Grid.mongo = mongoose.mongo;
 
 //app config
@@ -66,6 +68,7 @@ app.get("/", (req, res) => {
 
 app.use("/auth", authRouter);
 app.use("/chat", chatRouter);
+app.use("/user", userRouter);
 
 app.post("./upload/images", upload.single("file"), (req, res) => {
   res.status(201).send(req.file);
