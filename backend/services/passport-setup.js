@@ -3,6 +3,18 @@ import GoogleStrategy from "passport-google-oauth20";
 import User from "../models/userModel.js";
 import "dotenv/config";
 
+//serialize a user based on the mongoDB id
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+
+//de-serialize a user based on mongoDB id
+passport.deserializeUser((id, done) => {
+  User.findById(id).then((user) => {
+    done(null, user);
+  });
+});
+
 const setupAuth = passport.use(
   new GoogleStrategy(
     {
@@ -17,6 +29,7 @@ const setupAuth = passport.use(
         if (currentUser) {
           console.log("user is: " + currentUser);
           // already have user
+          done(null, currentUser);
         } else {
           //if no user create user
           new User({
@@ -27,6 +40,7 @@ const setupAuth = passport.use(
             .save()
             .then((newUser) => {
               console.log("new user created " + newUser);
+              done(null, newUser);
             });
         }
       });

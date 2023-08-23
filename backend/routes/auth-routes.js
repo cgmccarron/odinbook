@@ -26,7 +26,7 @@ authRouter.get(
 authRouter.get(
   "/google/redirect",
   passport.authenticate("google"),
-  (req, res) => res.send("you reached callback uri")
+  (req, res) => res.send(req.user)
 );
 
 export default authRouter;

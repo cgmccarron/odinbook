@@ -1,7 +1,7 @@
 import React from "react";
 import "./Post.css";
 import { Avatar } from "@mui/material";
-import { ChatBubble, NearMe, ThumbUp } from "@mui/icons-material";
+import { ChatBubble, ThumbUp } from "@mui/icons-material";
 
 const Post = ({ profilePic, username, imgName, message, timestamp }) => {
   return (
@@ -25,10 +25,6 @@ const Post = ({ profilePic, username, imgName, message, timestamp }) => {
         <div className="post__option">
           <ChatBubble className="MUI__icon" />
           <p>comment</p>
-        </div>
-        <div className="post__option">
-          <NearMe className="MUI__icon" />
-          <p>share</p>
         </div>
       </div>
     </div>

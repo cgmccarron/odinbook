@@ -7,6 +7,7 @@ import Grid from "gridfs-stream";
 import path from "path";
 import Pusher from "pusher";
 import "dotenv/config";
+import cookieSession from "cookie-session";
 
 import authRouter from "./routes/auth-routes.js";
 import postRouter from "./routes/feed-routes.js";
@@ -16,6 +17,7 @@ import userRouter from "./routes/user-routes.js";
 import mongoPosts from "./models/postModel.js";
 
 import setupAuth from "./services/passport-setup.js";
+import passport from "passport";
 
 Grid.mongo = mongoose.mongo;
 
@@ -28,6 +30,16 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 app.use(cors());
+app.use(
+  cookieSession({
+    maxAge: 86400000,
+    keys: [process.env.COOKIEKEY],
+  })
+);
+
+//initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 //db config
 const mongoURI = process.env.MONGO_DB_URI;
