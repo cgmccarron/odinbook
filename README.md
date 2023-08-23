@@ -15,9 +15,7 @@ I hope to create this project to demonstrate my abilities as a web developer.
 
 [<span style="color: green">M</span>ongoDB](https://www.mongodb.com/) as the database.<br>
 [Express](https://expressjs.com/) as the sever framework in javascript.<br>
-<img src="./resources/react-color.svg">
 [React](https://react.dev/) is the UI framework in javascript.<br>
-<img src="./resources/nodedotjs-color.svg">
 [Node.js](https://nodejs.org/en) is the javascript runtime environment.
 
 For the UI component and icon library I used [Material UI](https://mui.com/). <br>
