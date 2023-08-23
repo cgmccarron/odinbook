@@ -12,18 +12,24 @@ const setupAuth = passport.use(
       clientSecret: process.env.CLIENTSECRET,
     },
     (accessToken, refreshToken, profile, done) => {
-      //passport callback function
-      console.log("function fired");
-      console.log(profile);
-      new User({
-        username: profile.displayName,
-        googleId: profile.id,
-        avatar: profile._json.picture,
-      })
-        .save()
-        .then((newUser) => {
-          console.log("new user created " + newUser);
-        });
+      //check if user already exists in DB
+      User.findOne({ googleId: profile.id }).then((currentUser) => {
+        if (currentUser) {
+          console.log("user is: " + currentUser);
+          // already have user
+        } else {
+          //if no user create user
+          new User({
+            username: profile.displayName,
+            googleId: profile.id,
+            avatar: profile._json.picture,
+          })
+            .save()
+            .then((newUser) => {
+              console.log("new user created " + newUser);
+            });
+        }
+      });
     }
   )
 );
