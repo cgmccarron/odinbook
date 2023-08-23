@@ -75,7 +75,7 @@ mongoose.connect(mongoURI);
 
 // apes
 app.get("/", (req, res) => {
-  res.status(200).send("hello world");
+  res.status(200).send("hello world" + req.user.username);
 });
 
 app.use("/auth", authRouter);

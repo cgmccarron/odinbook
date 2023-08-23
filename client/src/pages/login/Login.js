@@ -5,20 +5,34 @@ import { auth, provider } from "../../firebase";
 import { useStateValue } from "../../StateProvider";
 import { actionTypes } from "../../Reducer";
 import { signInWithPopup } from "firebase/auth";
-
+import instance from "../../axios";
 import { GitHub } from "@mui/icons-material";
 
 const Login = () => {
   const [state, dispatch] = useStateValue();
 
+  const getUser = () => {
+    return instance
+      .get("auth/google")
+      .then((result) => {
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: result.user,
+        });
+      })
+      .catch((err) => console.log(err));
+  };
+
   const signIn = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         console.log(result);
-
-        dispatch({
-          type: actionTypes.SET_USER,
-          user: result.user,
+        instance.post("auth/firebaselogin", result).then((res) => {
+          console.log(res.data);
+          dispatch({
+            type: actionTypes.SET_USER,
+            user: res.data,
+          });
         });
       })
       .catch((error) => alert(error.message));

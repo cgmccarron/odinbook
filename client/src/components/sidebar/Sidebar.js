@@ -9,11 +9,14 @@ import PeopleIcon from "@mui/icons-material/People";
 
 import { Link } from "wouter";
 
+import { useStateValue } from "../../StateProvider";
+
 const Sidebar = () => {
+  const [{ user }, dispatch] = useStateValue();
   return (
     <div className="sidebar">
       <Link href="/">
-        <SidebarRow src="/ob.png" title="Christian McCarron" />
+        <SidebarRow src={user.avatar} title="Christian McCarron" />
       </Link>
       <Link href="/pages">
         <SidebarRow Icon={EmojiFlagsIcon} title="Users" />
@@ -24,6 +27,8 @@ const Sidebar = () => {
       <Link href="/friends">
         <SidebarRow Icon={PeopleIcon} title="Friends" />
       </Link>
+
+      {user.username}
     </div>
   );
 };

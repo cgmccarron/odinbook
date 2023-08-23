@@ -13,16 +13,11 @@ I hope to create this project to demonstrate my abilities as a web developer.
 
 ---
 
-<img src="./resources/mongodb-color.svg" height="16" >
-[<span style="color: green">M</span>ongoDB](https://www.mongodb.com/) as the database.<br>
-<img src="./resources/express-color.svg" height="16">
+### Tech Stack and Libraries Used
 
+[MongoDB](https://www.mongodb.com/) as the database.<br>
 [Express](https://expressjs.com/) as the sever framework in javascript.<br>
-<img src="./resources/react-color.svg" height="16">
-
 [React](https://react.dev/) is the UI framework in javascript.<br>
-<img src="./resources/nodedotjs-color.svg" height="16">
-
 [Node.js](https://nodejs.org/en) is the javascript runtime environment.
 <br>
 

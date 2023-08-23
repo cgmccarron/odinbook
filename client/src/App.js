@@ -15,8 +15,7 @@ import Chat from "./pages/chat/Chat";
 import ChatRoom from "./pages/chat/ChatRoom";
 
 function App() {
-  // const [{ user }, dispatch] = useStateValue();
-  const user = true;
+  const [{ user }, dispatch] = useStateValue();
 
   return (
     <div className="app">
