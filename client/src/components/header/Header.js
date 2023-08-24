@@ -11,6 +11,8 @@ import {
   Forum,
 } from "@mui/icons-material";
 
+import { useStateValue } from "../../StateProvider";
+
 import { IconButton } from "@mui/material";
 import { Link } from "wouter";
 
@@ -18,6 +20,7 @@ import "./Header.css";
 
 const Header = () => {
   const [isActive, setActive] = useState(0);
+  const [{ user }, dispatch] = useStateValue();
 
   return (
     <div className="header">
@@ -92,7 +95,7 @@ const Header = () => {
       <div className="header__right">
         <div className="header__info">
           <Avatar />
-          <h4>Christian McCarron</h4>
+          <h4>{user.username}</h4>
           <IconButton>
             <Notifs className="right__icon mui_icon" />
           </IconButton>

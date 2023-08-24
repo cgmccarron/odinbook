@@ -99,7 +99,8 @@ app.post("/upload/posts", async (req, res) => {
 
 app.get("/retrieve/posts", async (req, res) => {
   try {
-    const posts = await mongoPosts.find({});
+    const sort = { timestamp: -1 };
+    const posts = await mongoPosts.find({}).sort(sort);
     if (!posts) {
       return res.status(404).send("No Posts found");
     }

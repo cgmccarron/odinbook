@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./PostMaker.css";
 import { Avatar, Input } from "@mui/material";
 import { WebStories, PhotoLibrary, InsertEmoticon } from "@mui/icons-material";
 import instance from "../../../axios";
+import { useStateValue } from "../../../StateProvider";
 
 const PostMaker = () => {
+  const [{ user }, dispatch] = useStateValue();
   /* input is the what the user writes in the text input for the post
     image is the image that is in the post */
 
@@ -24,21 +26,23 @@ const PostMaker = () => {
     console.log("Submit", input, image);
   };
 
-  const makePost = () => {
+  const makePost = (e) => {
+    e.preventDefault();
     instance.post("/upload/posts", {
-      username: "Goose McCarron",
-      imgName: "null",
+      username: user.username,
+      imgName: "",
       text: input,
-      avatar: "me",
-      timestamp: new Date(),
+      avatar: user.avatar,
+      timestamp: new Date().getTime(),
     });
+    setInput("");
   };
 
   return (
     <div className="post__maker">
       {/* pm = post__maker for shorter syntax */}
       <div className="pm__top">
-        <Avatar src="https://media.licdn.com/dms/image/C4D03AQH1yMD3NzYDDQ/profile-displayphoto-shrink_800_800/0/1517493780761?e=1694649600&v=beta&t=faLehq2SPhoNtDZi4suG6SvXNGEISrbdjIRw5mSyVXQ" />
+        <Avatar src={user.avatar} />
         <form>
           <input
             type="text"

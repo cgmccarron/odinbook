@@ -10,7 +10,7 @@ const Post = ({ profilePic, username, imgName, message, timestamp }) => {
         <Avatar src={profilePic} className="post__avatar" />
         <div className="post__info">
           <h3>{username}</h3>
-          <p>{new Date(parseInt(timestamp)).toUTCString()}</p>
+          <p>{new Date(parseInt(timestamp)).toLocaleString()}</p>
         </div>
       </div>
       <div className="post__bottom">
