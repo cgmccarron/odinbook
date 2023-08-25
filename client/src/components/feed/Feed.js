@@ -10,19 +10,21 @@ const Feed = () => {
   const [postData, setPostData] = useState([]);
 
   useEffect(() => {
-    getPosts();
-  }, [postData]);
+    console.log("rerender");
+    const timer = setTimeout(() => {
+      getPosts();
+    }, 1000);
+    return () => clearTimeout(timer);
+  });
 
-  const getPosts = () => {
-    return instance
-      .get("retrieve/posts")
-      .then((res) => {
-        setPostData(res.data);
-      })
-      .catch((err) => console.log(err));
+  const getPosts = async () => {
+    try {
+      const res = await instance.get("retrieve/posts");
+      setPostData(res.data);
+    } catch (err) {
+      return console.log(err);
+    }
   };
-
-  let word = postData.length > 0 ? postData[0]._id : "word";
 
   return (
     <div className="feed">

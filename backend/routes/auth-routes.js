@@ -1,5 +1,4 @@
 import express from "express";
-import passport from "passport";
 import User from "../models/userModel.js";
 
 const authRouter = express.Router();
@@ -14,21 +13,6 @@ authRouter.get("/logout", (req, res) => {
   //handle with passport
   res.send("logging out");
 });
-
-//auth with google
-authRouter.get(
-  "/google",
-  passport.authenticate("google", {
-    scope: ["profile"],
-  })
-);
-
-//callback route for google to redirect
-authRouter.get(
-  "/google/redirect",
-  passport.authenticate("google"),
-  (req, res) => res.send(res.user)
-);
 
 authRouter.post("/firebaselogin", (req, res, next) => {
   console.log(req.body.user.displayName);

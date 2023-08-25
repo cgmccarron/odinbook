@@ -1,28 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import UserSearch from "../UserSearch";
 import Users from "../Users";
-
+import instance from "../../../axios";
 import "./Pages.css";
 
 const Pages = () => {
+  const [usersData, setUsersData] = useState([]);
+
+  useEffect(() => {
+    console.log("rerender");
+    const timer = setTimeout(() => {
+      getUsers();
+    }, 1000);
+    return () => clearTimeout(timer);
+  });
+
+  const getUsers = async () => {
+    try {
+      const res = await instance.get("user/users");
+      setUsersData(res.data);
+    } catch (err) {
+      return console.log(err);
+    }
+  };
+
   return (
     <div className="page">
       <UserSearch className="page__top" />
-      <Users
-        name="Christian"
-        profilePic="https://media.licdn.com/dms/image/C4D03AQH1yMD3NzYDDQ/profile-displayphoto-shrink_800_800/0/1517493780761?e=1694649600&v=beta&t=faLehq2SPhoNtDZi4suG6SvXNGEISrbdjIRw5mSyVXQ"
-        friend={true}
-      />
-      <Users
-        name="Goose"
-        profilePic="https://media.licdn.com/dms/image/C4D03AQH1yMD3NzYDDQ/profile-displayphoto-shrink_800_800/0/1517493780761?e=1694649600&v=beta&t=faLehq2SPhoNtDZi4suG6SvXNGEISrbdjIRw5mSyVXQ"
-        friend={true}
-      />
-      <Users
-        name="Mayhem"
-        profilePic="https://media.licdn.com/dms/image/C4D03AQH1yMD3NzYDDQ/profile-displayphoto-shrink_800_800/0/1517493780761?e=1694649600&v=beta&t=faLehq2SPhoNtDZi4suG6SvXNGEISrbdjIRw5mSyVXQ"
-        friend={false}
-      />
+
+      {usersData.length > 0 ? (
+        <>
+          {usersData.map((e) => {
+            return (
+              <Users key={e._id} name={e.username} profilePic={e.avatar} />
+            );
+          })}{" "}
+        </>
+      ) : (
+        <div>Pending</div>
+      )}
     </div>
   );
 };

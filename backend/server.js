@@ -16,9 +16,6 @@ import userRouter from "./routes/user-routes.js";
 
 import mongoPosts from "./models/postModel.js";
 
-import setupAuth from "./services/passport-setup.js";
-import passport from "passport";
-
 Grid.mongo = mongoose.mongo;
 
 //app config
@@ -36,10 +33,6 @@ app.use(
     keys: [process.env.COOKIEKEY],
   })
 );
-
-//initialize passport
-app.use(passport.initialize());
-app.use(passport.session());
 
 //db config
 const mongoURI = process.env.MONGO_DB_URI;
@@ -75,7 +68,7 @@ mongoose.connect(mongoURI);
 
 // apes
 app.get("/", (req, res) => {
-  res.status(200).send("hello world" + req.user.username);
+  res.status(200).send("hello world");
 });
 
 app.use("/auth", authRouter);
