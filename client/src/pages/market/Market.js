@@ -1,10 +1,12 @@
 import React from "react";
 import Product from "./Product";
+import ProductForm from "./ProductForm";
 
 import "./Market.css";
 const Market = () => {
   return (
     <div className="market">
+      <ProductForm />
       <div className="market__feed">
         <Product
           src="https://m.media-amazon.com/images/I/61j5PUMY4qL._AC_SX679_.jpg"

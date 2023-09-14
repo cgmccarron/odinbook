@@ -27,8 +27,6 @@ const Sidebar = () => {
       <Link href="/friends">
         <SidebarRow Icon={PeopleIcon} title="Friends" />
       </Link>
-
-      {user.username}
     </div>
   );
 };
