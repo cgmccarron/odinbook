@@ -11,6 +11,8 @@ const ChatRoom = () => {
   return (
     <div>
       <ChatRoomObject user={user} notif={false} />
+      <ChatRoomObject user={user} notif={true} />
+      <ChatRoomObject user={{name: "Goose", avatar: "111"}} notif={true} />
     </div>
   );
 };
