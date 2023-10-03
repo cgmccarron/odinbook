@@ -1,6 +1,8 @@
 import React from "react";
 import ChatRoomObject from "./ChatRoomObject";
 
+import "./ChatRoom.css"
+
 const ChatRoom = () => {
   let user = {
     name: "Christian McCarron",
@@ -9,7 +11,7 @@ const ChatRoom = () => {
   };
 
   return (
-    <div>
+    <div className="chatroom">
       <ChatRoomObject user={user} notif={false} />
       <ChatRoomObject user={user} notif={true} />
       <ChatRoomObject user={{name: "Goose", avatar: "111"}} notif={true} />
